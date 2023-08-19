@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Layout-chat</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    font-family: Arial, sans-serif;    
+  }
+  .chat-box {
+    padding: 10px;
+    margin: 5px;
+  }
+  .user-box {
+    background-color: #ffffff;
+    float: right;
+  }
+  .bot-box {
+    background-color: #ffffff;
+    float: left;
+  }
+  .chat-send {
+    padding: 0px;
+    margin: 0px;
+    width: 480px;
+    font-size: 15px;
+  }
+  .buton-send {
+    background-color: #d3d3d3;
+    color: #00973f;
+    font-size: 15px;
+  }
+  .Atendimento {
+    color: #30005e;
+    font-size: 20px;
+  }
+</style>
+</head> 
+<body>
+  <table border="2" width="560" height="660" align="center">
+    <tr class="chat-box">
+      <td class="Atendimento" colspan="2" width="500" height="50">Atendimento online</td>
+    </tr>
+    <tr class="chat-box">
+      <td class="chat-box bot-box">Blabla Blabla Blabla Blabla</td>
+    </tr>
+    <tr class="chat-box">
+      <td class="chat-box bot-box">Blabla Blabla Blabla Blabla</td>
+    </tr>
+    </tr>
+    <tr class="chat-box">
+      <td class="chat-box user-box">Blabla Blabla Blabla Blabla</td>
+    </tr>
+    <tr class="chat-box">
+      <td class="chat-box user-box">Blabla Blabla Blabla Blabla</td>
+    </tr>
+    <br>
+    <tr>
+    <td>
+    <div>
+      <label for="nome"></label>
+      <input class="chat-send" id="nome" name="nome" placeholder="Digite sua mensagem..." required="required">
+      <button class="buton-send" type="submit">Enviar</button>
+    </div>
+    </td>
+    </tr>
+  </table>
+</body>
+</html>
