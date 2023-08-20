@@ -1,1 +1,2 @@
 # simple-chat
+Naturalmente, tem maneiras melhores de chegar no mesmo resultado, talvez até melhores, entretanto essa foi a maneira que eu fiz, e funcionou. "emoji de jóinha". Segundo o João Vittor, ficou ruim, mas o João Vittor fala muita merda kkkkkkkk.
