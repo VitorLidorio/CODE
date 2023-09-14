@@ -1,66 +1,76 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Layout-chat</title>
-<meta charset="utf-8">
-<style>
-body {
-    font-family: sans-serif;
-  }
-  .chat-box {
-    padding: 10px;
-    margin: 5px;
-  }
-  .usuario-box {
-    background-color: #ffffff;
-    float: right;
-  }
-  .atendente-box {
-    background-color: #ffffff;
-    float: left;
-  }
-  .chat-send {
-    padding: 0px;
-    width: 480px;
-    font-size: 15px;
-  }
-  .buton-send {
-    background-color: #d3d3d3;
-    color: #00973f;
-    font-size: 15px;
-  }
-  .Atendimento {
-    color: #30005e;
-    font-size: 20px;
-  }
-</style>
-</head> 
-<body>
-  <table border="2" width="560" height="660" align="center">
-    <tr class="chat-box">
-      <td class="Atendimento" colspan="2" width="500" height="50">Atendimento online</td>
-    </tr>
-    <tr class="chat-box">
-      <td class="chat-box atendente-box">Blabla Blabla Blabla Blabla</td>
-    </tr>
-    <tr class="chat-box">
-      <td class="chat-box atendente-box">Blabla Blabla Blabla Blabla</td>
-    </tr>
-    </tr>
-    <tr class="chat-box">
-      <td class="chat-box usuario-box">Blabla Blabla Blabla Blabla</td>
-    </tr>
-    <tr class="chat-box">
-      <td class="chat-box usuario-box">Blabla Blabla Blabla Blabla</td>
-    </tr>
-    <br>
-    <td>
-    <div>
-      <label for="nome"></label>
-      <input class="chat-send" id="nome" name="nome" placeholder="Digite sua mensagem..." required="required">
-      <button class="buton-send" type="submit">Enviar</button>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple_chat</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div id="chat-screen">
+      <header>
+        <h2>Atendimento on-line</h2>
+      </header>
+      <div class="messages-list">
+        <div class="message-item">
+          <div class="msg-user"><strong>Atendente diz:</strong></div>
+          <div class="msg-chat">Grêmio querido eu te sigo a vida inteira</div>
+        </div>
+        <div class="message-item message-user">
+          <div class="msg-user"><strong>Você diz:</strong></div>
+          <div class="msg-chat">Estou contigo não importa oque aconteça</div>
+        </div>       
+        <div class="message-item">
+          <div class="msg-user"><strong>Atendente diz:</strong></div>
+          <div class="msg-chat">Grêmio querido hoje temos que ganhar</div>
+        </div>
+        <div class="message-item">
+          <div class="msg-user"><strong>Atendente diz:</strong></div>
+          <div class="msg-chat">Atrás do gol nós cantaremos sem parar</div>
+        </div>
+        <div class="message-item">
+          <div class="msg-user"><strong>Atendente diz:</strong></div>
+          <div class="msg-chat">Pra quem não sabe pelo Grêmio eu dou a vida</div>
+        </div>
+        <div class="message-item">
+          <div class="msg-user"><strong>Atendente diz:</strong></div>
+          <div class="msg-chat">Pra quem não sabe o tricolor é minha alegria</div>
+        </div>
+        <div class="message-item message-user">
+          <div class="msg-user"><strong>Você diz:</strong></div>
+          <div class="msg-chat">Quando eu morrer não quero nada de flores</div>
+        </div>
+        <div class="message-item message-user">
+          <div class="msg-user"><strong>Você diz:</strong></div>
+          <div class="msg-chat">Eu quero um trapo que tenha as suas cores</div>
+        </div>
+        <div class="message-item">
+          <div class="msg-user"><strong>Atendente diz:</strong></div>
+          <div class="msg-chat">E dale dale dale dale tricolor</div>
+        </div>
+        <div class="message-item">
+          <div class="msg-user"><strong>Atendente diz:</strong></div>
+          <div class="msg-chat">E dale dale dale dale tricolor</div>
+        </div>
+        <div class="message-item">
+          <div class="msg-user"><strong>Atendente diz:</strong></div>
+          <div class="msg-chat">E dale dale dale dale tricolor</div>
+        </div>
+        <div class="message-item">
+          <div class="msg-user"><strong>Atendente diz:</strong></div>
+          <div class="msg-chat">E dale dale dale dale tricolor</div>
+        </div> 
+        <div class="message-item message-user">
+          <div class="msg-user"><strong>Você diz:</strong></div>
+          <div class="msg-chat">https://www.youtube.com/watch?v=2qHYf-GS9NE</div>
+        </div>     
+      </div>
+      <form id="form-chat-send" action="index.html" method="post">
+        <input type="text" id="message" name="message" placeholder="Mensagem..." />
+        <button type="submit">ENVIAR</button>
+      </form>
     </div>
-    </td>
-  </table>
-</body>
+  </body> 
 </html>
+
+
