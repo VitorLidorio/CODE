@@ -31,13 +31,13 @@ html {
     padding: 16px;
   }
   
-  .messages-list {
+  .messages {
     padding: 8px 16px;
     height: 440px;
     overflow: auto;
   }
   
-  .message-item {
+  .message {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -50,20 +50,18 @@ html {
     background-color: rgb(142, 195, 255);
   }
   
-  .message-user {
+  .message {
     align-items: flex-end;
-  }
-  .message-user .msg-chat {
     background-color: #d4d4d4;
   }
-  
+ 
   form {
-    display: flex;
+    
     background: #d0d0d0;
     border-top: 1px solid rgb(0, 119, 255);
     padding: 16px;
   }
-  form input {
+  .message-input {
     flex: 1;
     border: 2px solid green;
     font-size: 16px;
@@ -73,7 +71,7 @@ html {
     cursor: pointer;
     transition: 0.2s ease;
   }
-  form button {
+  .send-button {
     background-color: #bdbdbd;
     color: white;
     font-weight: bold;

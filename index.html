@@ -10,66 +10,36 @@
     <div id="chat-screen">
       <header>
         <h2>Atendimento on-line</h2>
-      </header>
-      <div class="messages-list">
-        <div class="message-item">
-          <div class="msg-user"><strong>Atendente diz:</strong></div>
-          <div class="msg-chat">Grêmio querido eu te sigo a vida inteira</div>
-        </div>
-        <div class="message-item message-user">
-          <div class="msg-user"><strong>Você diz:</strong></div>
-          <div class="msg-chat">Estou contigo não importa oque aconteça</div>
-        </div>       
-        <div class="message-item">
-          <div class="msg-user"><strong>Atendente diz:</strong></div>
-          <div class="msg-chat">Grêmio querido hoje temos que ganhar</div>
-        </div>
-        <div class="message-item">
-          <div class="msg-user"><strong>Atendente diz:</strong></div>
-          <div class="msg-chat">Atrás do gol nós cantaremos sem parar</div>
-        </div>
-        <div class="message-item">
-          <div class="msg-user"><strong>Atendente diz:</strong></div>
-          <div class="msg-chat">Pra quem não sabe pelo Grêmio eu dou a vida</div>
-        </div>
-        <div class="message-item">
-          <div class="msg-user"><strong>Atendente diz:</strong></div>
-          <div class="msg-chat">Pra quem não sabe o tricolor é minha alegria</div>
-        </div>
-        <div class="message-item message-user">
-          <div class="msg-user"><strong>Você diz:</strong></div>
-          <div class="msg-chat">Quando eu morrer não quero nada de flores</div>
-        </div>
-        <div class="message-item message-user">
-          <div class="msg-user"><strong>Você diz:</strong></div>
-          <div class="msg-chat">Eu quero um trapo que tenha as suas cores</div>
-        </div>
-        <div class="message-item">
-          <div class="msg-user"><strong>Atendente diz:</strong></div>
-          <div class="msg-chat">E dale dale dale dale tricolor</div>
-        </div>
-        <div class="message-item">
-          <div class="msg-user"><strong>Atendente diz:</strong></div>
-          <div class="msg-chat">E dale dale dale dale tricolor</div>
-        </div>
-        <div class="message-item">
-          <div class="msg-user"><strong>Atendente diz:</strong></div>
-          <div class="msg-chat">E dale dale dale dale tricolor</div>
-        </div>
-        <div class="message-item">
-          <div class="msg-user"><strong>Atendente diz:</strong></div>
-          <div class="msg-chat">E dale dale dale dale tricolor</div>
-        </div> 
-        <div class="message-item message-user">
-          <div class="msg-user"><strong>Você diz:</strong></div>
-          <div class="msg-chat">https://www.youtube.com/watch?v=2qHYf-GS9NE</div>
-        </div>     
-      </div>
-      <form id="form-chat-send" action="index.html" method="post">
-        <input type="text" id="message" name="message" placeholder="Mensagem..." />
-        <button type="submit">ENVIAR</button>
-      </form>
-    </div>
+      </header>   
+      <div><div id="chat-container">
+      <div id="chat-messages"></div>
+      <input autofocus type="text" id="message-input" placeholder="Mensagem...">
+      <button id="send-button" type="submit">Enviar</button></div>
+      <script>
+        function addMessage(message) {
+          const chatMessages = document.getElementById("chat-messages");
+          const messageElement = document.createElement("div");
+          messageElement.textContent = message;
+          chatMessages.appendChild(messageElement);
+        }
+        function sendMessage() {
+        const messageInput = document.getElementById("message-input");
+        const message = messageInput.value;
+  
+        if (message.trim() !== "") {
+            addMessage("Você: " + message);
+            messageInput.value = "";
+          }
+        }
+        const sendButton = document.getElementById("send-button");
+          sendButton.addEventListener("click", sendMessage);
+          const messageInput = document.getElementById("message-input");
+          messageInput.addEventListener("keydown", function(event) {
+              if (event.key === "Enter") {
+                  sendMessage();
+              }
+          });
+      </script>
   </body> 
 </html>
 
