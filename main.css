@@ -6,6 +6,13 @@ html {
   *, *:before, *:after {
     box-sizing: inherit;
   }
+
+.input_message {
+    color:rgb(0, 119, 255);
+    margin: 0;
+    border: 2px solid rgb(0, 119, 255);
+    font-size: 12px;
+  }
   
   body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     margin: 0;
