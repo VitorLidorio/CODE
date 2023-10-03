@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introdução a JS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div id="page">
+      <header class="bg-green-600">
+        <h1 class="font-bold text-white px-5 py-4 lg:py-5 container mx-auto text-xl lg:text-3xl">
+          Front-end - Eng. Software UniSATC
+        </h1>
+      </header>
+      <main class="container mx-auto px-5 py-6">
+        <p class="border border-gray-400 bg-gray-200 px-3 py-2 rounded-lg mb-6">
+          Durante todo o desenvolvimento, para melhorar nossos testes sugiro estarem com o Console de Debug do Chrome
+          aberto, para isso utilizem a tecla <kbd>F12</kbd> e procure pela aba <strong>Console</strong>.
+        </p>
+
+        <div id="conteudo"></div>
+
+        <button id="btAddPara" class="bg-red-600 p-2 font-bold text-white rounded-lg shadow-lg">
+          Adiciona Parágrafo
+        </button>
+      </main>
+    </div>
+
+    <script>
+      function addParagrafo() {
+        const novoParagrafo = document.createElement("p");
+        novoParagrafo.innerHTML = "<strong>Meu novo parágrafo!</strong>";
+        novoParagrafo.classList.add("text-2xl", "text-center");
+        novoParagrafo.addEventListener("click", function () {
+          conteudo.removeChild(novoParagrafo);
+        });
+
+        const conteudo = document.querySelector("#conteudo");
+        conteudo.appendChild(novoParagrafo);
+      }
+
+      const btAddPara = document.querySelector("#btAddPara");
+      btAddPara.addEventListener("click", addParagrafo);
+    </script>
+  </body>
+</html>
